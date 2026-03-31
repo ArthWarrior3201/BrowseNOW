@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BrowseNOW</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    /* LOGO + NAME ROW */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px; /* space between logo and text */
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 60px;
+      border-radius: 12px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    p {
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: 10px;
+      background: #1f1f1f;
+      border: 1px solid #333;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #333;
+    }
+
+    .disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGO + NAME -->
+  <div class="header">
+    <img src="Gemini_Generated_Image_jgcvt9jgcvt9jgcv.png" alt="Logo" class="logo">
+    <h1>BrowseNOW</h1>
+  </div>
+
+  <!-- TAGLINE -->
+  <p>The Best Browser, Ad-Free, Just Like You Want.</p>
+
+  <!-- DOWNLOAD BUTTONS -->
+  <div class="buttons">
+    <a id="winBtn" class="btn disabled">Windows</a>
+    <a id="macBtn" class="btn disabled">macOS</a>
+    <a id="linuxBtn" class="btn disabled">Linux</a>
+  </div>
+
+  <script>
+    // 🔧 Add links later here
+    const downloads = {
+      windows: "",
+      mac: "",
+      linux: ""
+    };
+
+    function activateButton(id, link) {
+      if (link) {
+        const btn = document.getElementById(id);
+        btn.href = link;
+        btn.classList.remove("disabled");
+        btn.setAttribute("target", "_blank");
+      }
+    }
+
+    activateButton("winBtn", downloads.windows);
+    activateButton("macBtn", downloads.mac);
+    activateButton("linuxBtn", downloads.linux);
+  </script>
+
+</body>
+</html>
